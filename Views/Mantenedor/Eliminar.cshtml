@@ -6,16 +6,16 @@
 
 <div class="card">
     <div class="card-header">
-        Eliminar Contacto
+        Delete Contact
     </div>
     <div class="card-body">
         <form asp-action="Eliminar" asp-controller="Mantenedor" method="post">
             <input asp-for="IdContacto" type="hidden" class="form-control">
             <div class="alert alert-danger" role="alert">
-                ¿Desea eliminar el contacto : @Html.DisplayTextFor(m => m.Nombre) ?
+                ¿Do you want to delete the contact : @Html.DisplayTextFor(m => m.Nombre) ?
             </div>
-            <button type="submit" class="btn btn-danger">Eliminar</button>
-            <a asp-action="Listar" asp-controller="Mantenedor" class="btn btn-warning">Volver a la lista</a>
+            <button type="submit" class="btn btn-danger">Delete</button>
+            <a asp-action="Listar" asp-controller="Mantenedor" class="btn btn-warning">Back to list</a>
         </form>
     </div>
 </div>
