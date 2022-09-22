@@ -24,4 +24,7 @@
     <Folder Include="Datos\" />
     <Folder Include="Views\Mantenedor\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Remove="appsettings.Development.json" />
+  </ItemGroup>
 </Project>
