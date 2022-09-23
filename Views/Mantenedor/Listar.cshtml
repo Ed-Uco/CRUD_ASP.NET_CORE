@@ -6,19 +6,19 @@
 }
 
 <div class="card">
-    <div class="card-header text-center">
+    <div class="card-header text-center text-white bg-primary mb-3">
         Contact List
     </div>
     <div class="card-body">
         <a asp-action="Guardar" asp-controller="Mantenedor" class="btn btn-success"><i class="bi bi-plus-circle"></i> New Contact</a>
         <hr/>
-        <table class="table table-bordered">
-            <thead>
+        <table class="table table-bordered table-sm text-center">
+            <thead class="thead-dark">
                 <tr>
                     <th>Name</th>
                     <th>Phone Number</th>
                     <th>E-mail</th>
-                    <th></th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -29,7 +29,7 @@
                             <td>@item.Telefono</td>
                             <td>@item.Correo</td>
                             <td>
-                                <a asp-action="Editar" asp-controller="Mantenedor" class="btn btn-primary btn-sm" asp-route-IdContacto="@item.IdContacto"><i class="bi bi-pencil-square"></i> Edit</a>
+                                <a asp-action="Editar" asp-controller="Mantenedor" class="btn btn-primary btn-sm me-5" asp-route-IdContacto="@item.IdContacto"><i class="bi bi-pencil-square"></i> Edit</a>
                                 <a asp-action="Eliminar" asp-controller="Mantenedor" class="btn btn-danger btn-sm" asp-route-IdContacto="@item.IdContacto"><i class="bi bi-trash"></i> Delete</a>
                             </td>
                         </tr>
